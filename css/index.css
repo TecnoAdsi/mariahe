@@ -1,0 +1,147 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+	box-sizing: border-box;
+}
+.wrapper{
+	height:100vh;
+	display:flex;
+	flex-flow:column nowrap;
+
+	background-image: url('../img/woman-3597101_1920.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* Encabezado Principal */
+.header{
+	width:90%;
+	margin:auto;
+	position: fixed;
+	z-index: 999 !important;
+
+	display:flex;
+	flex-flow:row nowrap;
+}
+
+.logo-item{
+	width:auto;
+	height:100px;
+}
+	.item:nth-child(1){
+		flex:0 1 auto;		
+	}
+	.item:nth-child(2){
+		flex:6 1 auto;
+		align-self: center;
+	}
+
+.menu{
+	display:flex;
+	flex-flow:column nowrap;
+}
+	.nav-menu{
+		display:flex;
+		flex-flow:row nowrap;
+	}
+	.nav-item{
+		flex:auto;
+		padding:5px;
+		text-align:center;
+		list-style: none;
+		font-style:bold;		
+	}
+	.nav-link{
+		color:#FFF;
+		display: block;
+		padding:.8rem 1rem;
+		text-decoration: none;
+	}
+	.nav-item .nav-link:hover{
+		background:rgba(0,0,0, .2);
+	}
+	.nav-link ul > a{
+		text-decoration: none;
+	}
+
+/* Sección de Inicio */
+.section{
+	width:90%;
+	margin-top:100px;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+}
+.container{
+	padding:10px;
+	flex:1 1 auto;
+	align-self: auto;
+	background-color:rgba(0,0,0,1);
+	border-radius:10px;
+}
+.container{
+	padding:10px;
+	flex:0 1 auto;
+	align-self: auto;
+	background-color:rgba(0,0,0,1);
+	border-radius:10px;
+}
+.titulo1{
+	padding:20px;
+	flex:1 1 auto;
+	align-self: baseline;
+	color:rgba(255,165,0,1);
+}
+.mascara{
+	background:white;
+	border-radius:7px;
+	border: 5px solid rgba(255,165,0,1);
+}
+table, tr, td{
+	padding:10px;
+	line-height: 1.2em;
+}
+
+
+@media only screen and (max-width:480px){
+	.nav-item ul a{
+		padding-left:2rem;
+		}
+	.nav-item ul .nav-item ul a{
+		padding-left:3rem;
+	}
+}
+
+@media only screen and (min-width:480px){
+	nav ul{
+		flex-direction:row;
+	/*     justify-content:flex-end; */
+	}
+
+	nav ul li{
+		position:relative;
+		flex:1 0 auto;
+		text-align:left;
+	}
+	
+	.nav-item ul, .nav-item ul .nav-item ul{
+		display:none;
+		width:100%;
+		position:absolute;
+	}
+	
+	.nav-item ul .nav-item ul{
+		left:100%;
+		top:0;
+	}
+	
+	nav ul li:hover ul,  .nav-item ul .nav-item:hover ul{
+		display:flex;
+		flex-direction:column;
+	}
+}
