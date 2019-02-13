@@ -4,11 +4,9 @@
 	font-family: arial;
 	box-sizing: border-box;
 }
-.wrapper{
-	height:100vh;
-	display:flex;
-	flex-flow:column nowrap;
 
+.wrapper{
+	background:black;
 	background-image: url('../img/woman-3597101_1920.jpg');
 	background-attachment: fixed;
 	background-position: center;
@@ -16,124 +14,139 @@
 	background-repeat: no-repeat;
 }
 
-/* Encabezado Principal */
-.header{
-	width:90%;
-	margin:auto;
-	position: fixed;
-	z-index: 999 !important;
+.container{
+	display:flex;
+	flex-flow:column nowrap;
+}
 
+.header{
+	padding:20px;
 	display:flex;
 	flex-flow:row nowrap;
 }
-
-.logo-item{
-	width:auto;
-	height:100px;
-}
 	.item:nth-child(1){
-		flex:0 1 auto;		
+		flex:1 1 auto;
+		align-self: center;
+		display:flex;
+		justify-content: center;
 	}
+		.logo-item{
+			width:auto;
+			height:100px;
+			align-self:center;
+		}
+
 	.item:nth-child(2){
 		flex:6 1 auto;
 		align-self: center;
 	}
+		.menu{}
+			.nav-menu{
+				display:flex; 
+				flex-flow:row nowrap;
+			}
+				.nav-item{
+					padding:5px;
+					flex:1 1 auto; 
+					align-self: center;
+					list-style: none;
+					text-align: center;
+				}
+				.nav-item:hover{
+					background-color:rgba(0,0,0,.5);
+				}
+				.nav-link{
+					color:rgba(255,255,255,1);
+					text-decoration:none;
+				}
 
-.menu{
-	display:flex;
-	flex-flow:column nowrap;
+	.item:nth-child(3){
+		flex:1 1 auto;
+		align-self: center;
+	}
+
+.section{
+	margin:10px;
+	padding:10px;
 }
-	.nav-menu{
+	.servicios{
 		display:flex;
 		flex-flow:row nowrap;
 	}
-	.nav-item{
-		flex:auto;
-		padding:5px;
-		text-align:center;
-		list-style: none;
-		font-style:bold;		
-	}
-	.nav-link{
-		color:#FFF;
-		display: block;
-		padding:.8rem 1rem;
-		text-decoration: none;
-	}
-	.nav-item .nav-link:hover{
-		background:rgba(0,0,0, .2);
-	}
-	.nav-link ul > a{
-		text-decoration: none;
-	}
-
-/* Sección de Inicio */
-.section{
-	width:90%;
-	margin-top:100px;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: space-around;
-	align-items: center;
-	align-content: stretch;
-}
-.container{
-	padding:10px;
-	flex:1 1 auto;
-	align-self: auto;
-	background-color:rgba(0,0,0,1);
-	border-radius:10px;
-}
-.container{
-	padding:10px;
-	flex:0 1 auto;
-	align-self: auto;
-	background-color:rgba(0,0,0,1);
-	border-radius:10px;
-}
-.titulo1{
-	padding:20px;
-	flex:1 1 auto;
-	align-self: baseline;
-	color:rgba(255,165,0,1);
-}
-.mascara{
-	background:white;
-	border-radius:7px;
-	border: 5px solid rgba(255,165,0,1);
-}
-table, tr, td{
-	padding:10px;
-	line-height: 1.2em;
-}
-
+		.row{
+			margin:10px;
+			flex:1 0 auto; 
+			display:flex; 
+			flex-flow:column nowrap;
+			background-color:rgba(128,128,128,.7);
+		}
+			.encabezado{
+				flex:auto;
+				padding:20px;
+				text-align: center;
+			}
+				.titulo{
+					flex:auto;
+					color:rgba(255,165,0,1);					
+				}
+				.titulo a{
+					text-decoration: none;
+					color:rgba(255,165,0,1);
+				}
+			.contenido{
+				margin:15px;
+				border-radius:10px;
+				border:5px solid rgba(218,165,32,1);
+				background-color:rgba(255,255,255,1);
+			}
+				.row3{
+					flex:auto;
+					display:flex;
+					flex-flow:row nowrap;					
+				}
+				.div{
+					padding:30px;
+					line-height: 1.5em;
+				}
+				.lista{
+					list-style: square;
+				}
 .footer{
 	bottom:0;
 	padding:20px;
-	display:flex;
-	flex-flow:row nowrap;
-	align-items:flex-end;
-	justify-content: space-around;
-	background-color:rgba(0,0,0,1);
-}
-.column{
-	display:flex;
-	flex-flow:row nowrap;
-}
-.column address, strong{
-	color:rgba(255,255,255,1);
-}
-.column b{
-	color:rgba(255,0,165,1);
-}
-.social{
-	flex:auto;
-	align-self: center;
-}
-.social a{
-	padding:10px;
-}
+	background:rgba(0,0,0,1);
 
+	display:flex;
+	flex-flow:row nowrap;
+}
+	.row2:nth-child(1){
+		padding:10px;
+		line-height: 2em;
+
+		flex:1 1 auto; 
+		display:flex; 
+		flex-flow:column nowrap;
+		justify-content: space-between;
+	}
+	.row2:nth-child(2){
+		flex:1 1 auto; 
+		display:flex; 
+		flex-flow:row nowrap;
+		align-items: center;
+	}
+		.datos{
+			color:rgba(255,255,200,1);
+
+			flex:1 1 auto;
+			align-self: stretch;
+		}
+		.social{
+			margin:auto;
+			flex:1 0 auto; 
+			align-self: center;
+		}
+
+/*
 
 @media only screen and (max-width:480px){
 	.nav-item ul a{
@@ -147,7 +160,7 @@ table, tr, td{
 @media only screen and (min-width:480px){
 	nav ul{
 		flex-direction:row;
-	/*     justify-content:flex-end; */
+	/*     justify-content:flex-end; 
 	}
 
 	nav ul li{
