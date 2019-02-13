@@ -107,6 +107,33 @@ table, tr, td{
 	line-height: 1.2em;
 }
 
+.footer{
+	bottom:0;
+	padding:20px;
+	display:flex;
+	flex-flow:row nowrap;
+	align-items:flex-end;
+	justify-content: space-around;
+	background-color:rgba(0,0,0,1);
+}
+.column{
+	display:flex;
+	flex-flow:row nowrap;
+}
+.column address, strong{
+	color:rgba(255,255,255,1);
+}
+.column b{
+	color:rgba(255,0,165,1);
+}
+.social{
+	flex:auto;
+	align-self: center;
+}
+.social a{
+	padding:10px;
+}
+
 
 @media only screen and (max-width:480px){
 	.nav-item ul a{
