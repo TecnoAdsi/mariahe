@@ -2,28 +2,33 @@
 	margin: 0;
 	padding: 0;
 	font-family: arial;
-	box-sizing: border-box;
+	box-sizing: border-box;	
 }
 
-.wrapper{
-	background:black;
+body{
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content: space-between;
+	align-items: stretch;	
+
+	background-size: cover;
 	background-image: url('../img/woman-3597101_1920.jpg');
 	background-attachment: fixed;
-	background-position: center;
-	background-size: cover;
+	background-position: center;	
 	background-repeat: no-repeat;
 }
 
-.container{
-	display:flex;
-	flex-flow:column nowrap;
-}
-
 .header{
-	padding:20px;
-	display:flex;
-	flex-flow:row nowrap;
+	flex:1 5 auto;
+	align-self: auto;
+
+	top:0;
+	position: sticky;
 }
+	.container{
+		display:flex;
+		flex-flow:row nowrap;
+	}
 	.item:nth-child(1){
 		flex:1 1 auto;
 		align-self: center;
@@ -46,7 +51,7 @@
 				flex-flow:row nowrap;
 			}
 				.nav-item{
-					padding:5px;
+					padding: 10px;
 					flex:1 1 auto; 
 					align-self: center;
 					list-style: none;
@@ -64,53 +69,130 @@
 		flex:1 1 auto;
 		align-self: center;
 	}
+		.reloco{
+			padding:20px;
+			color:rgba(255,255,0,1);
+		}
+
+.subheader{
+	width:90%;
+	height: 60vh;
+
+	display:flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+	.rows{
+		flex:auto; 
+		align-self: center;
+
+		display:flex; 
+		flex-flow:column nowrap;
+		align-items: flex-end;
+	}
+		.welcome{
+			flex:1 0 auto;
+			align-self:center;
+
+			padding:10px;
+			color:rgba(255,255,255,1);
+		}
+		.misitio{
+			flex:1 1 auto;
+			align-self: center;
+
+			padding:10px;
+			text-align: center;
+			line-height: 1.5rem;
+			color:rgba(255,255,255,.8);
+		}
 
 .section{
-	margin:10px;
-	padding:10px;
+	max-width: 100%;
+	background-color:rgba(255,255,255,1);
+
+	display:flex;
+	flex-flow: column nowrap;
 }
 	.servicios{
+		padding:30px;
 		display:flex;
 		flex-flow:row nowrap;
+
+		background-color:rgba(255,255,255,1);
 	}
-		.row{
-			margin:10px;
-			flex:1 0 auto; 
+		.row{			
+			flex:auto; 
+			align-self: flex-start;
+
 			display:flex; 
 			flex-flow:column nowrap;
-			background-color:rgba(128,128,128,.7);
+
+			margin:20px;
+			border:3px solid rgba(150,150,150,.5);
 		}
-			.encabezado{
-				flex:auto;
-				padding:20px;
+			.imagen{
+				width:auto;
+				height:40vh;
+			}
+			.titulo2{
+				padding:10px;
+				font-weight: 600;
 				text-align: center;
 			}
-				.titulo{
-					flex:auto;
-					color:rgba(255,165,0,1);					
-				}
-				.titulo a{
-					text-decoration: none;
-					color:rgba(255,165,0,1);
-				}
-			.contenido{
-				margin:15px;
-				border-radius:10px;
-				border:5px solid rgba(218,165,32,1);
-				background-color:rgba(255,255,255,1);
+			.center{
+				padding:10px;
+				font-size:1em;
+				line-height: 2rem;
+				text-align: center;
 			}
-				.row3{
-					flex:auto;
-					display:flex;
-					flex-flow:row nowrap;					
-				}
-				.div{
-					padding:30px;
-					line-height: 1.5em;
-				}
-				.lista{
-					list-style: square;
-				}
+
+.contacto{
+	padding:30px;
+	background-color:rgba(0,0,0,.2) !important;
+	background-image: url('../img/tablet-791050_1280.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-size:cover;
+	background-repeat: no-repeat;
+
+	display:flex;
+	flex-flow: row nowrap;
+	align-content: center;
+}
+	.column:nth-child(1){
+		flex:1 1 auto;
+		align-self: auto;
+
+		margin:10px;
+		padding:30px;
+		line-height: 1.5em;
+		background-color:rgba(0,0,0,.1);
+		border-style: 3px solid rgba(160,160,160,1);
+
+		display:flex;
+		flex-flow: row nowrap;
+	}
+		.form-form{
+			padding:20px;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-between;
+		}
+			.form-input{
+				padding:10px;
+				border-radius:7px;
+				color:none;
+			}
+	.column:nth-child(2){
+		flex:1 1 auto;
+		align-self: auto;
+		margin:10px;
+
+		border-style: 7px solid rgba(160,160,160,1);
+	}
+
 .footer{
 	bottom:0;
 	padding:20px;
@@ -118,8 +200,10 @@
 
 	display:flex;
 	flex-flow:row nowrap;
+
+	border-style: 2px solid white;
 }
-	.row2:nth-child(1){
+	.row2{
 		padding:10px;
 		line-height: 2em;
 
@@ -128,11 +212,8 @@
 		flex-flow:column nowrap;
 		justify-content: space-between;
 	}
-	.row2:nth-child(2){
-		flex:1 1 auto; 
-		display:flex; 
+	.row2:last-child{
 		flex-flow:row nowrap;
-		align-items: center;
 	}
 		.datos{
 			color:rgba(255,255,200,1);
