@@ -1,0 +1,45 @@
+*{
+	margin:10px;
+	padding:10px;
+	font-family: arial;
+	box-sizing: border-box;
+}
+body{
+	background-image: url('../img/color-2174045_1280.png');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.wrapper{
+	display:flex;
+	flex-flow: column nowrap;
+}
+
+.container{
+	display:flex;
+	flex-flow: column nowrap;
+}
+	.row{
+		display:flex;
+		flex-flow: row nowrap;
+	}
+		.column{
+			flex:1 1 auto;
+			align-self: auto;
+			
+			text-align: center;
+			background-color:rgba(255,200,100,1);
+		}
+		.link{
+			cursor:pointer;
+			text-decoration: none;
+		}
+			.link>.sistema:hover{
+				background-color:rgba(0,0,0,.5);
+			}
+		.sistema{
+			width: auto;
+			height: 30vh;
+		}
