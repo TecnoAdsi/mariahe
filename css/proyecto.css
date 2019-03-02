@@ -1,0 +1,23 @@
+.wrapper{
+	display:flex;
+	flex-flow:row nowrap;
+	align-content:stretch;
+
+	background-color:rgba(255,255,255,1);
+}
+
+.section{
+	padding:20px;
+
+	flex:2 1 auto;
+	align-self: auto;
+}
+
+.aside{
+	flex:1 1 auto;
+	align-self: auto;
+}
+
+p{
+	text-align: justify;
+}
