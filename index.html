@@ -4,163 +4,166 @@
 	<!-- Etiquetas SEO -->
 	<meta content="María Helena Rosas Nieto" name="author">
 	<meta content="" name="description">
-	<meta content="Ingeniería de Sistemas, Programación, Sistema de Información, UNAD, SENA, ICONTEC, APA, Vancouver, Tesis, Normas" name="keywords">
+	<meta content="TECNOADSI, MariaHe, Ingeniería de Sistemas, Programación, Sistema de Información, UNAD, SENA, ICONTEC, APA, Vancouver, Tesis, Normas, Blog" name="keywords">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 	<title>MaríaHe</title>
 
+	<link rel="stylesheet" href="css/navegacion.css">
 	<link rel="stylesheet" href="css/index.css">
 
-	<script type="text/javascript" src="js/reload.js"></script>
+	<script type="text/javascript">
+		function startTime(){
+			today=new Date();
+			h=today.getHours();
+			m=today.getMinutes();
+			s=today.getSeconds();
+			m=checkTime(m);
+			s=checkTime(s);
+			document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
+			t=setTimeout('startTime()',500);
+		}
+
+		function checkTime(i){
+			if (i<10) {i="0" + i;}return i;
+		}
+		
+		window.onload=function(){
+			startTime();
+		}
+	</script>
 </head>
 <body>
 	
-	<!-- Menú -->
+	<!-- Encabezado -->
 	<header class="header">
 		<div class="container">
-			<div class="item"><img src="img/academia.png" class="logo-item" alt=""></div>
-
-			<div class="item">
-				<nav class="menu">
-					<ul class="nav-menu">
-						<li class="nav-item"><a href="#" class="nav-link">INICIO</a></li>
-						<li class="nav-item"><a href="#" class="nav-link">APUNTES U</a></li>
-						<li class="nav-item"><a href="actividades.html" class="nav-link">ACTIVIDADES</a></li>						
-						<li class="nav-item"><a href="programando.html" class="nav-link">PROGRAMANDO ANDO</a></li>
-						<li class="nav-item"><a href="#" class="nav-link">PROYECTO</a></li>
-						<li class="nav-item"><a href="#" class="nav-link">CONTACTO</a></li>
-					</ul>
-				</nav>
-			</div>
-
-			<div class="item">
-				<script type="text/javascript">
-					function startTime(){
-						today=new Date();
-						h=today.getHours();
-						m=today.getMinutes();
-						s=today.getSeconds();
-						m=checkTime(m);
-						s=checkTime(s);
-						document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
-						t=setTimeout('startTime()',500);
-					}
-
-					function checkTime(i){
-						if (i<10) {i="0" + i;}return i;
-					}
-					window.onload=function(){
-						startTime();
-					}
-				</script>
-
-				<div class="reloco" id="reloj" style="font-size:20px;"></div>
-			</div>			
+			<img src="img/spa-2790264_640.png" class="logo" alt="">
 		</div>
 	</header>
 
-	<div class="subheader">
-		<div class="rows">
-			<h1 class="welcome">Bienvenidos a mi Sitio</h1>
-			<p class="misitio">Soy estudiante de Ingeniería de Sistemas, a través de esta web ofrezco mis servicios profesionales <br>
-			como tecnóloga en desarrollo de Sistemas de Información y experiencia en la realización de trabajos escritos. <br>A la vez busco aplicar lo aprendido en el transcurso de la carrera.</p>
-		</div>
-	</div>
+	<!-- Navegación -->
+	<nav class="menu">
+		<ul class="nav-menu">
+			<li class="nav-item"><a href="" class="nav-link">INICIO</a></li>
+			<li class="nav-item"><a href="apuntes.html" class="nav-link">APUNTES</a></li>
+			<li class="nav-item"><a href="actividades.html" class="nav-link">ACTIVIDADES</a></li>						
+			<li class="nav-item"><a href="programando.html" class="nav-link">PROGRAMANDO ANDO</a></li>
+			<li class="nav-item"><a href="proyecto.html" class="nav-link">PROYECTO</a></li>
+			<li class="nav-item"><a href="#contacto" class="nav-link">CONTACTO</a></li>
+		</ul>		
+	</nav>
 
 	<!-- Secciones -->
-	<section class="section">
-		<div class="servicios">
-			<div class="row">
-				<img src="img/technology-791029_640.jpg" alt="" class="imagen">
-				<h2 class="titulo2">Aplicación de Normas</h2>
-				<span class="center">
-					Presentación del documento (márgenes, interlineado, tipografía, etc.).
-				</span>
-			</div>
-
-			<div class="row">
-				<img src="img/editing-1756958_640.jpg" alt="" class="imagen">
-				<h2 class="titulo2">Corrección de Estilo</h2>
-				<span class="center">
-					Revisión ortotipográfica, gramatical y de estilo al documento.
-				</span>
-			</div>
-
-			<div class="row">
-				<img src="img/books-2158737_640.jpg" alt="" class="imagen">
-				<h2 class="titulo2">Trabajos de Investigación</h2>
-				<span class="center">
-					Elaboración de artículos, ensayos, resúmenes, anteproyectos, proyectos o tesis, etc.
-				</span>
-			</div>
+	<section class="section" id="inicio">
+		<div class="contenedor">
+			<h1 class="welcome">Bienvenidos</h1>
+			<p class="center">
+				Blog dedicado al aprendizaje autónomo y práctica de los conocimientos adquiridos por la experiencia en la transcripción de trabajos de investigación, así como los alcanzados en la Tecnología en Análisis y Desarrollo de Sistemas (ADSI - SENA) y la Ingeniería de Sistemas (UNAD)
+			</p>
 		</div>
 	</section>
 
-	<section class="contacto">
-		<div class="column">
+	<section class="section" id="servicios">
+		<article class="article">
+			<aside class="aside">
+				<div class="row">
+					<h2 class="titulo2">Aplicación de Normas</h2>
+					<span class="centrado">Presentación del documento (márgenes, interlineado, tipografía, etc.).</span>				
+				</div>
+			</aside>
+
+			<aside class="aside">
+				<div class="row">
+					<h2 class="titulo2">Corrección de Estilo</h2>
+					<span class="centrado">Revisión ortotipográfica, gramatical y de estilo al documento.</span>					
+				</div>		
+			</aside>
+
+			<aside class="aside">
+				<div class="row">
+					<h2 class="titulo2">Trabajos de Investigación</h2>
+					<span class="centrado">Asesoría de artículos, ensayos, resúmenes, anteproyectos, proyectos o tesis, etc.</span>					
+				</div>					
+			</aside>			
+		</article>
+	</section>
+
+	<section class="section info" id="contacto">
+		<aside class="column mensaje">
+			<h1 class="title-form">Contacto</h1>
 			<form action="" class="form-form">
 				<input type="text" class="form-input" placeholder="Nombre">
 				<input type="text" class="form-input" placeholder="Correo Electrónico">
 				<input type="text" class="form-input" placeholder="Celular">
 				<textarea name="" id="" cols="30" rows="10" class="form-input" placeholder="Mensaje"></textarea>
 				<button type="button" id="btnEmail" class="form-button">Enviar</button>
-			</form>
-		</div>
+			</form>			
+		</aside>
 
-		<div class="column">
+		<aside class="column">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d989.8340401056226!2d-73.0997646!3d7.0869738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x45f94a4a25067a2a!2sTechnoADSI!5e0!3m2!1ses!2sco!4v1550101462309" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</div>
+		</aside>
 	</section>
 
 	<!-- Pie de página -->
 	<footer class="footer">
-		<div class="row2">
+		<article class="column-footer col-1">
 			<div class="datos"><span>Autora:</span>&nbsp;<strong>María Helena</strong></div>
-			<div class="datos"><address>Floridablanca, Colombia</address></div>
-		</div>
+			<div class="datos"><address>Floridablanca, Colombia</address></div>			
+		</article>
 
-		<div class="row2">
+		<article class="column-footer col-2">
 			<div class="datos">
+				<span class="reloco"><div id="reloj" style="font-size:20px;"></div></span>
+
 				<h3>Eres el Visitante No.</h3>
-				<div class="contador"></div>
+				<div class="contador">
+					<!-- Contador de visitas -->
+					<center><a href="http://www.websmultimedia.com/contador-de-visitas-gratis">
+						<img style="border: 0px solid; display: inline;" alt="" src="http://www.websmultimedia.com/contador-de-visitas.php?id=258692"></a><br><a href='http://www.websmultimedia.com/contador-de-visitas-gratis'></a><br><a href='http://www.websmultimedia.com/registro-de-marcas-y-logotipos'></a></center>
+					<!-- Fin Contador de visitas -->
+				</div>
+			</div>			
+		</article>
+
+		<article class="column-footer col-3">
+			<div class="social">
+				<a href="https://web.whatsapp.com/" style="display:inline-block; text-decoration:none; line-height: 2.5;" title="315 2448534">
+					<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/whatsapp.png" alt=""style="padding-right:5px; font-size:1.5em; color:#32CD32;">
+				</a>
 			</div>
 
-				<div class="social">
-					<a href="https://web.whatsapp.com/" style="display:inline-block; text-decoration:none; line-height: 2.5;" title="315 2448534">
-						<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/whatsapp.png" alt=""style="padding-right:5px; font-size:1.5em; color:#32CD32;">
-					</a>
-				</div>
+			<div class="social">
+				<a href="https://www.facebook.com/facebook" style="display:inline-block; text-decoration:none; line-height: 2.5;">
+					<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/facebook2.png" alt=""style="padding-right:5px; font-size:1.5em; color:#0000CD;">
+				</a>
+			</div>
 
-				<div class="social">
-					<a href="https://www.facebook.com/facebook" style="display:inline-block; text-decoration:none; line-height: 2.5;">
-						<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/facebook2.png" alt=""style="padding-right:5px; font-size:1.5em; color:#0000CD;">
-					</a>
-				</div>
+			<div class="social">
+				<a href="https://www.youtube.com/channel/UCtny1K7JLtq3Se1PxT6ibfg" style="display:inline-block; text-decoration:none; line-height: 2.5;">
+					<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/youtube.png" alt=""style="padding-right:5px; font-size:1.5em; color:#FF0000;">
+				</a>
+			</div>
 
-				<div class="social">
-					<a href="https://www.youtube.com/channel/UCtny1K7JLtq3Se1PxT6ibfg" style="display:inline-block; text-decoration:none; line-height: 2.5;">
-						<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/youtube.png" alt=""style="padding-right:5px; font-size:1.5em; color:#FF0000;">
-					</a>
-				</div>
+			<div class="social">
+				<a href="https://plus.google.com/+MariaHelenaRosasNietoMariahe" style="display:inline-block; text-decoration:none; line-height: 2.5;">
+					<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/google-plus3.png" alt=""style="padding-right:5px; font-size:1.5em; color:#B22222;">
+				</a>
+			</div>
 
-				<div class="social">
-					<a href="https://plus.google.com/+MariaHelenaRosasNietoMariahe" style="display:inline-block; text-decoration:none; line-height: 2.5;">
-						<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/google-plus3.png" alt=""style="padding-right:5px; font-size:1.5em; color:#B22222;">
-					</a>
-				</div>
+			<div class="social">
+				<a href="https://www.pinterest.com/mariaherosni/" style="display:inline-block; text-decoration:none; line-height: 2.5;">
+					<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/pinterest.png" alt=""style="padding-right:5px; font-size:1.5em; color:#B00000;">
+				</a>
+			</div>
 
-				<div class="social">
-					<a href="https://www.pinterest.com/mariaherosni/" style="display:inline-block; text-decoration:none; line-height: 2.5;">
-						<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/pinterest.png" alt=""style="padding-right:5px; font-size:1.5em; color:#B00000;">
-					</a>
-				</div>
-
-				<div class="social">
-					<a href="https://co.linkedin.com/in/maria-helena-rosas-nieto-04b2a34" style="display:inline-block; text-decoration:none; line-height: 2.5;">
-						<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/linkedin.png" alt=""style="padding-right:5px; font-size:1.5em; color:#0073B1;">
-					</a>
-				</div>						
-		</div>
+			<div class="social">
+				<a href="https://co.linkedin.com/in/maria-helena-rosas-nieto-04b2a34" style="display:inline-block; text-decoration:none; line-height: 2.5;">
+					<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/linkedin.png" alt=""style="padding-right:5px; font-size:1.5em; color:#0073B1;">
+				</a>
+			</div>						
+		</article>
 	</footer>
 
 </body>
