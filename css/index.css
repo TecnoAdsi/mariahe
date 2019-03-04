@@ -1,3 +1,10 @@
+.wrapper{
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content: center;
+	align-content: center;
+}
+
 /* Sección Inicio */
 #inicio{
 	height: 80vh;
@@ -97,27 +104,33 @@
 }
 
 /* Sección Contacto */
-.info{	
-	display:flex;
-	flex-flow:row nowrap;
-	justify-content: center;
-	align-content: stretch;
-}
-#contacto{
+.section2{
 	height: 90vh;
 	background-image: url('../img/tablet-791050_1280.jpg');
 	background-attachment: fixed;
 	background-position: center;
 	background-size:cover;
 	background-repeat: no-repeat;
+
+	display:flex;
+	justify-content: center;
 }
-.column{
-	margin:20px;
-	flex:auto;
+.article1{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content: center;
+	align-content: center;
+}
+.axide:nth-child(1){
+	margin-right:20px;
+	flex:1 0 auto;
 	align-self: center;
+
+	background-color:rgba(0,0,0,.5);
 }
-.mensaje{
-	background-color:rgba(255,246,251,.7);
+.axide:nth-child(2){
+	flex:1 0 auto;
+	align-self: center;
 }
 .title-form{
 	padding:10px;
