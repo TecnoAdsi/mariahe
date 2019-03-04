@@ -1,18 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-CO">
 <head>
 	<meta charset="UTF-8">
 	<title>Proyecto</title>
 
 	<link rel="stylesheet" href="css/navegacion.css">
 	<link rel="stylesheet" href="css/proyecto.css">
+
+	<script type="text/javascript">
+		function startTime(){
+			today=new Date();
+			h=today.getHours();
+			m=today.getMinutes();
+			s=today.getSeconds();
+			m=checkTime(m);
+			s=checkTime(s);
+			document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
+			t=setTimeout('startTime()',500);
+		}
+
+		function checkTime(i){
+			if (i<10) {i="0" + i;}return i;
+		}
+		
+		window.onload=function(){
+			startTime();
+		}
+	</script>	
 </head>
 <body>
 
 	<!-- Encabezado -->
 	<header class="header">
 		<div class="container">
-			<img src="img/spa-2790264_640.png" class="logo" alt="">
+			<a href="https://sites.google.com/view/tecnologia-e-investigacion/"><img src="img/spa-2790264_640.png" class="logo" alt=""></a>
 		</div>
 	</header>
 
@@ -20,96 +41,69 @@
 	<nav class="menu">
 		<ul class="nav-menu">
 			<li class="nav-item"><a href="index.html" class="nav-link">INICIO</a></li>
-			<li class="nav-item"><a href="#apuntes" class="nav-link">APUNTES</a></li>
+			<li class="nav-item"><a href="apuntes.html" class="nav-link">APUNTES</a></li>
 			<li class="nav-item"><a href="actividades.html" class="nav-link">ACTIVIDADES</a></li>						
 			<li class="nav-item"><a href="programando.html" class="nav-link">PROGRAMANDO ANDO</a></li>
-			<li class="nav-item"><a href="proyecto.html" class="nav-link">PROYECTO</a></li>
-			<li class="nav-item"><a href="#" class="nav-link">CONTACTO</a></li>
+			<li class="nav-item"><a href="#" class="nav-link">PROYECTO</a></li>
+			<li class="nav-item"><a href="index.html#contacto" class="nav-link">CONTACTO</a></li>
 		</ul>		
 	</nav>
 
-	<div class="wrapper">
-		<section class="section">
-			<hgroup>
-				<h2>Sistema contable para una pequeña papelería</h2>
-				<h4>Utilizando el patrón de diseño MVC y la Programación Orientada a Objetos (POO)</h4>
-			</hgroup>
-
-			<p>
-				Aunque existen en el mercado diferentes sistemas contables de forma gratuita, presentan ciertas limitaciones como el número de facutras que pueden expedirse en un mes. Por otro lado, los cambios que se han presentando en cuanto a la adopción de un único régimen para Colombia respecto a los impuestos, como la denominación de "Régimen Simplificado" y "Régimen Común", desapareciendo estos de la legislación nacional y que la Dirección de Impuestos y Aduanas Nacionales (DIAN), establece una nueva "Régimen " 
-			</p>
-
-			<p>
-				Bien, dejando de lado el aspecto normativo fiscal y contable, los conocimientos de programación aplicados y ampliados a través de la investigación y estudio autónomo, como los adquiridos en el SENA y la UNAD, comprenden los lenguajes de programación PHP, AJAX, Javascript y Java, ya que el sistema está conformado por módulos de facturación, nómina, contabilidad y reportes financieros. 
-			</p>
-
-			<p>
-				En la opción de facturación, al registrar los productos se genera un código de barras, de modo que se facilite la elaboración de la factura, utilizando para leer dicho código un smartphone, 
-			</p>
-		</section>
-
-		<aside class="aside">
-			<h3>Archivos</h3>
-			<a href=""><strong>2019</strong></a>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-		</aside>		
-	</div>
+	<section class="section">
+		<article class="article">
+			
+		</article>
+	</section>
 
 	<!-- Pie de página -->
 	<footer class="footer">
-		<div class="row2">
+		<article class="artikle">
 			<div class="datos"><span>Autora:</span>&nbsp;<strong>María Helena</strong></div>
-			<div class="datos"><address>Floridablanca, Colombia</address></div>
-		</div>
+			<div class="datos">Floridablanca, Colombia</div>			
+		</article>
 
-		<div class="row2">
-				<div class="social">
-					<a href="https://web.whatsapp.com/" style="display:inline-block; text-decoration:none; line-height: 2.5;" title="315 2448534">
-						<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/whatsapp.png" alt=""style="padding-right:5px; font-size:1.5em; color:#32CD32;">
-					</a>
-				</div>
+		<article class="artikle">
+			<div class="datos">
+				<span class="reloco"><div id="reloj" style="font-size:20px;"></div></span>		
+		</article>
 
-				<div class="social">
-					<a href="https://www.facebook.com/facebook" style="display:inline-block; text-decoration:none; line-height: 2.5;">
-						<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/facebook2.png" alt=""style="padding-right:5px; font-size:1.5em; color:#0000CD;">
-					</a>
-				</div>
+		<article class="artikle">
+			<div class="social">
+				<a href="https://web.whatsapp.com/" style="display:inline-block; text-decoration:none; line-height: 2.5;" title="315 2448534">
+					<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/whatsapp.png" alt=""style="padding-right:5px; font-size:1.5em; color:#32CD32;">
+				</a>
+			</div>
 
-				<div class="social">
-					<a href="https://www.youtube.com/channel/UCtny1K7JLtq3Se1PxT6ibfg" style="display:inline-block; text-decoration:none; line-height: 2.5;">
-						<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/youtube.png" alt=""style="padding-right:5px; font-size:1.5em; color:#FF0000;">
-					</a>
-				</div>
+			<div class="social">
+				<a href="https://www.facebook.com/facebook" style="display:inline-block; text-decoration:none; line-height: 2.5;">
+					<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/facebook2.png" alt=""style="padding-right:5px; font-size:1.5em; color:#0000CD;">
+				</a>
+			</div>
 
-				<div class="social">
-					<a href="https://plus.google.com/+MariaHelenaRosasNietoMariahe" style="display:inline-block; text-decoration:none; line-height: 2.5;">
-						<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/google-plus3.png" alt=""style="padding-right:5px; font-size:1.5em; color:#B22222;">
-					</a>
-				</div>
+			<div class="social">
+				<a href="https://www.youtube.com/channel/UCtny1K7JLtq3Se1PxT6ibfg" style="display:inline-block; text-decoration:none; line-height: 2.5;">
+					<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/youtube.png" alt=""style="padding-right:5px; font-size:1.5em; color:#FF0000;">
+				</a>
+			</div>
 
-				<div class="social">
-					<a href="https://www.pinterest.com/mariaherosni/" style="display:inline-block; text-decoration:none; line-height: 2.5;">
-						<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/pinterest.png" alt=""style="padding-right:5px; font-size:1.5em; color:#B00000;">
-					</a>
-				</div>
+			<div class="social">
+				<a href="https://plus.google.com/+MariaHelenaRosasNietoMariahe" style="display:inline-block; text-decoration:none; line-height: 2.5;">
+					<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/google-plus3.png" alt=""style="padding-right:5px; font-size:1.5em; color:#B22222;">
+				</a>
+			</div>
 
-				<div class="social">
-					<a href="https://co.linkedin.com/in/maria-helena-rosas-nieto-04b2a34" style="display:inline-block; text-decoration:none; line-height: 2.5;">
-						<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/linkedin.png" alt=""style="padding-right:5px; font-size:1.5em; color:#0073B1;">
-					</a>
-				</div>						
-		</div>
+			<div class="social">
+				<a href="https://www.pinterest.com/mariaherosni/" style="display:inline-block; text-decoration:none; line-height: 2.5;">
+					<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/pinterest.png" alt=""style="padding-right:5px; font-size:1.5em; color:#B00000;">
+				</a>
+			</div>
 
-		<span class="reloco"><div id="reloj" style="font-size:20px;"></div></span>
+			<div class="social">
+				<a href="https://co.linkedin.com/in/maria-helena-rosas-nieto-04b2a34" style="display:inline-block; text-decoration:none; line-height: 2.5;">
+					<img src="https://tecnoadsi.github.io/tecno_adsi/firma/PNG/linkedin.png" alt=""style="padding-right:5px; font-size:1.5em; color:#0073B1;">
+				</a>
+			</div>						
+		</article>
 	</footer>
 	
 </body>
