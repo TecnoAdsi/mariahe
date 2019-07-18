@@ -1,0 +1,37 @@
+body{
+	height: 100vh;
+	background-size: 100%;
+	background-color: rgba(0,0,0,0);
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-image: url('../img/high-bay-408222_1280.jpg');
+}
+
+.container-1{
+	width:40%;
+	background-color:rgba(0,0,0,.5);
+	padding:30px;
+	position: absolute;
+	text-align:center;
+	left: 50%; 
+	top: 50%; 
+	transform: translate(-50%, -50%); 
+	-webkit-transform: translate(-50%, -50%);
+}
+
+.header>h3{
+	color:#FFF; 
+	padding:10px; 
+	background-color:#009ECE;
+	text-align: center;
+}
+
+.container-2{
+	padding-top:20px;
+}
+
+.etiqueta{
+	color: rgba(255,255,255,1);
+	padding-top:5px;
+}
